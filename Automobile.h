@@ -4,25 +4,28 @@ class Automobile
 private:
 	char* brandAndModel;
 	int yearOfManufacture;
-	int averageSpeedOfTheCar;
+protected:
+	float averageSpeedOfTheCar;
+	
 public:
-	Automobile(char* bAM, int yOM, int aSOTC);
-	~Automobile();
+	Automobile(char* bAM, int yOM, float aSOTC);
+	Automobile(float, float);
+	Automobile();
+	virtual ~Automobile();
+
 	char* GetBrandAndModel()const
 	{
 		return brandAndModel;
 	}
-	int GetYearOfManufacture()
+	int GetYearOfManufacture()const
 	{
 		return yearOfManufacture;
 	}
-	int GetAverageSpeedOfTheCar()
+	float GetAverageSpeedOfTheCar()const
 	{
 		return averageSpeedOfTheCar;
 	}
-	float ComputeDistance(float time)
-	{
-		return (averageSpeedOfTheCar * time);
-	}
+
+	float ComputeDistance(float time);
 };
 

@@ -1,10 +1,17 @@
 #pragma once
 #include "Automobile.h"
-class Taxi// :
-	//public Automobile
+
+class Taxi :
+	public Automobile
 {
+private:
+	float fare;
+	float totalMoneyThisCar;
+
 public:
-	Taxi();
+	Taxi(float fare, float totalMoneyThisCar);
 	~Taxi();
+
+	float AmountOfPaymentForATrip(float);
 };
 
